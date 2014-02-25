@@ -1,0 +1,55 @@
+<?php
+if($this->raw['eval']['shownumbers'])
+{
+    $arrFullList = array_merge(range(0,9), range('a', 'z'));
+}
+else
+{
+    $arrFullList = range('a', 'z');
+}
+
+$arrOptions = array();
+foreach($this->options as $strOptionKey => $arrOption)
+{
+    $arrOptions[$arrOption['key']] = $arrOption;
+}
+?>
+
+<ul>
+    <?php
+        $i = 0; $last = count($this->options) - 1;
+        foreach($arrFullList as $strListKey):
+            // Hide empty values if activate.
+            if($this->raw['eval']['hideempty'] && !array_key_exists($strListKey, $arrOptions)) continue;
+            // Build the css class.
+            $class = (!$i) ? 'first ' : '';
+            $class .= ($i == $last) ? 'last ' : '';
+            $class .= ($i++ % 2) ? 'even' : 'odd';
+            $class .= ' ' . $strListKey;
+            // Check if available.
+            if(array_key_exists($strListKey, $arrOptions))
+            {
+                $blnAvailable = true;
+                $class .= ' available';
+            }
+            else
+            {
+                $blnAvailable = false;
+                $class .= ' unavailable';
+            }
+
+            $class .= (strlen($option['class'])) ? ' ' . $option['class'] : '';
+        ?>
+    <li class="<?php echo $class; ?>">
+        <?php if($blnAvailable): ?>
+            <a href="<?php echo $arrOptions[$strListKey]['href']; ?>" class="<?php echo $class; ?>" title="<?php echo ucfirst($arrOptions[$strListKey]['value']); ?>">
+                <?php echo $arrOptions[$strListKey]['value']; ?><?php if($this->showCount): ?> <span class="count">(<?php echo $this->count[$strListKey]; ?>)</span><?php endif; ?>
+            </a>
+        <?php else: ?>
+            <span class="<?php echo $class; ?>" title="<?php echo ucfirst($strListKey); ?>">
+                <?php echo ucfirst($strListKey); ?><?php if($this->showCount): ?> <span class="count">(0)</span><?php endif; ?>
+            </span>
+        <?php endif; ?>
+    </li>
+    <?php endforeach; ?>
+</ul>

@@ -15,6 +15,10 @@
  * @filesource
  */
 
+use \MetaModels\Filter\IFilter as IMetaModelFilter;
+use \MetaModels\Filter\Rules\StaticIdList as MetaModelFilterRuleStaticIdList;
+use \MetaModels\Filter\Setting\SimpleLookup as MetaModelFilterSettingSimpleLookup;
+use \MetaModels\FrontendIntegration\FrontendFilterOptions as MetaModelFrontendFilterOptions;
 
 /**
  * Filter "register" for FE-filtering, based on filters by the MetaModels team.

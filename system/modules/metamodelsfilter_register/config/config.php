@@ -20,5 +20,5 @@
  */
 $GLOBALS['METAMODELS']['filters']['register']['class'] = 'MetaModelFilterSettingRegister';
 $GLOBALS['METAMODELS']['filters']['register']['image'] = 'system/modules/metamodelsfilter_register/html/filter_register.png';
-$GLOBALS['METAMODELS']['filters']['register']['info_callback'] = array('TableMetaModelFilterSetting', 'infoCallback');
+$GLOBALS['METAMODELS']['filters']['register']['info_callback'] = array('MetaModels\Dca\Filter', 'infoCallback');
 $GLOBALS['METAMODELS']['filters']['register']['attr_filter'][] = 'tabletext';

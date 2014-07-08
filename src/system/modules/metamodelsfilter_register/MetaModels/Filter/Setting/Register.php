@@ -14,6 +14,8 @@
  * @license    LGPL.
  * @filesource
  */
+ 
+namespace MetaModels\Filter\Setting;
 
 use \MetaModels\Filter\IFilter as IMetaModelFilter;
 use \MetaModels\Filter\Rules\StaticIdList as MetaModelFilterRuleStaticIdList;
@@ -27,7 +29,7 @@ use \MetaModels\FrontendIntegration\FrontendFilterOptions as MetaModelFrontendFi
  * @subpackage FilterRegister
  * @author     Stefan Heimes <stefan_heimes@hotmail.com>
  */
-class MetaModelFilterSettingRegister extends MetaModelFilterSettingSimpleLookup
+class Register extends Simple
 {
 	/**
 	 * Overrides the parent implementation to always return true, as this setting is always available for FE filtering.

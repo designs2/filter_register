@@ -60,12 +60,6 @@
 		"contao": {
 			"symlinks":{
 				"src/system/modules/metamodelsfilter_register":"system/modules/metamodelsfilter_register"
-			},
-			"transifex": {
-				"project": "metamodels",
-				"prefix": "filter_fromto-",
-				"languages_cto": "src/system/modules/metamodelsfilter_register/languages",
-				"languages_tx": ".tx"
 			}
 		},
 		"branch-alias": {

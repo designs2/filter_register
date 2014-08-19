@@ -48,9 +48,6 @@
 		"cyberspectrum/contao-toolbox": "dev-master",
 		"phpunit/phpunit": ">=3.7.10,<4-dev"
 	},
-	"conflict": {
-		"contao/core": "3.0.*"
-	},
 	"autoload": {
 		"psr-0": {
 			"MetaModels": "src/system/modules/metamodelsfilter_register"

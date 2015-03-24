@@ -45,13 +45,19 @@
   },
   "autoload": {
     "psr-0": {
-      "MetaModels": "src/system/modules/metamodelsfilter_register"
+      "MetaModels": "src"
     }
   },
   "extra": {
     "contao": {
       "symlinks": {
-        "src/system/modules/metamodelsfilter_register": "system/modules/metamodelsfilter_register"
+        "contao": "system/modules/metamodelsfilter_register"
+      },
+      "transifex": {
+        "project": "metamodels",
+        "prefix": "filter_register-",
+        "languages_cto": "contao/languages",
+        "languages_tx": ".tx"
       }
     },
     "branch-alias": {

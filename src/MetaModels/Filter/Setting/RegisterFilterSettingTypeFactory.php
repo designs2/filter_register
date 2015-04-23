@@ -10,6 +10,7 @@
  * @package    MetaModels
  * @subpackage FilterRange
  * @author     Christian Schiffler <c.schiffler@cyberspectrum.de>
+ * @author     Marc Reimann <reimann@mediendepot-ruhr.de>
  * @copyright  The MetaModels team.
  * @license    LGPL.
  * @filesource
@@ -33,6 +34,6 @@ class RegisterFilterSettingTypeFactory extends AbstractFilterSettingTypeFactory
             ->setTypeName('register')
             ->setTypeIcon('system/modules/metamodelsfilter_register/html/filter_register.png')
             ->setTypeClass('MetaModels\Filter\Setting\Register')
-            ->allowAttributeTypes('tabletext');
+            ->allowAttributeTypes('tabletext', 'translatedtext', 'text');
     }
 }

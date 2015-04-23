@@ -10,6 +10,7 @@
  * @package    MetaModels
  * @subpackage FilterRange
  * @author     Christian Schiffler <c.schiffler@cyberspectrum.de>
+ * @author     Marc Reimann <reimann@mediendepot-ruhr.de>
  * @copyright  The MetaModels team.
  * @license    LGPL.
  * @filesource
